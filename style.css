@@ -1,0 +1,122 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background: rgb(63,63,63);
+    background: linear-gradient(0deg, rgba(63,63,63,1) 0%, rgba(24,26,31,1) 68%);
+}
+
+.sidebar {
+    width: 200px;
+    background: #0f21e6;
+    color: white;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.sidebar .logo {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.track-time {
+    background: #0f21e6;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.view-toggle button {
+    background: none;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.view-toggle .active {
+    background: #007bff;
+    color: white;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+.profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+.time-tracking {
+    margin-top: 20px;
+}
+
+.day-section {
+    background: rgb(73, 72, 72);
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.day-section h3 {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+}
+
+.day-section ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.day-section ul li {
+    padding: 10px;
+    background: #838384;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+}
+
+.add-data {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
