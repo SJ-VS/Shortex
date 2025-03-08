@@ -1,0 +1,281 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px;
+    background: #181a1f;
+    overflow: hidden;
+    width: 100%;
+}
+
+.logo{
+    width: 250px;
+    
+}
+nav{
+    float: inline-end;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 80px;
+    font-size: 22px;
+}
+
+
+nav ul li {
+    display: inline-block;
+    position: relative;
+}
+  
+nav ul li::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #0087ca;
+    transform-origin: bottom right;
+    transition: transform 0.35s ease-out;
+}
+  
+nav ul li:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+button {
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    
+}
+
+.login {
+    background: #6c7ef0;
+    color: white;
+    padding: 10px 20px 10px 40px;
+    border-radius: 20px;
+    border: none;
+    font-size: 15px;
+    margin-left: -30px; /* Negative margin to overlap */
+    position: relative;
+    z-index: 1;
+}
+.login:hover {
+    background: #011abd;
+}
+
+
+.signup {
+    background: #203be8;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    font-size: 15px;
+    position: relative;
+    z-index: 2;
+    margin-left: 50px; /* Adjust to shift it left */
+}
+.signup:hover {
+    background: #011abd;
+}
+
+/* Apply styles to the body */
+body {
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    background: rgb(63,63,63);
+    background: linear-gradient(0deg, rgba(63,63,63,1) 0%, rgba(24,26,31,1) 68%);
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Make sure it takes the full viewport height */
+    margin: 0;
+    padding: 0;
+}
+
+/* About Us Heading - Placed Outside the Container */
+/* h1 {
+    
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-align: right;
+} */
+
+/* Main Container - Full Page */
+.container {
+    display: flex;
+    flex-direction: column; /* Stack description and authors */
+    align-items: center;
+    justify-content: center;
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    background: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Description Section */
+/* Typewriter Effect */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 64%;
+    }
+}
+
+/* Cursor Blinking Effect */
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+/* Apply to Description */
+.description {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 50px;
+    font-family: "Kanit", serif;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0;
+    border-right: 3px solid white; /* Cursor effect */
+    animation: typing 3s steps(40, end) forwards, blink 0.75s step-end ;
+}
+
+/* Apply to Sub-Description */
+/* .sub-description {
+    font-size: 2.0em;
+    text-align: center;
+    margin-bottom: 40px;
+    font-family: "Kanit", serif;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0;
+    border-right: 3px solid white;
+    animation: typing 3s steps(40, end) 3s forwards, blink 0.75s step-end ;
+} */
+
+/* Authors Section - Side by Side Layout */
+.authors {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    width: 100%;
+    flex-wrap: wrap; /* Wraps on smaller screens */
+}
+
+/* Each Author's Container */
+.author-container {
+    flex: 1;
+    margin-top: 10px;
+    max-width: 700px;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+}
+
+/* Hover Effect */
+.author-container:hover {
+    transform: scale(1.05);
+}
+
+/* Author Image */
+.team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border: 3px solid #757575; /* Default gray border */
+    transition: border-color 0.4s ease-in-out;
+}
+
+/* Hover Effect: Glowing Shine */
+.team-member img:hover {
+    border-color: #b0b0b0; /* Lighter shine effect */
+    box-shadow: 0 0 12px rgba(176, 176, 176, 0.8);
+    animation: glow 1s ;
+}
+
+/* Glow Animation */
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 5px rgba(176, 176, 176, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 15px rgba(176, 176, 176, 0.9);
+    }
+}
+
+
+/* Author Name */
+h3 {
+    color: #3bff4f;
+    margin-bottom: 15px;
+}
+
+/* Social Icons Styling */
+.social-icons {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.icon {
+    color: #b0b0b0;
+    font-size: 20px;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.icon:hover {
+    color: #26c035; /* Blue on hover */
+    transform: scale(1.2); /* Slight zoom effect */
+}
+
+.phone-number{
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    
+}
+.phone{
+    color: gray;
+    cursor:default;
+    text-decoration: none;
+}
+
