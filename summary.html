@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Text Summarizer</title>
+    <link rel="stylesheet" href="summary.css">
+    <!-- Include Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div ><img src="logo.png" alt="company logo" class="logo"></div>
+        <nav>
+            <ul>
+                <li class="opt">Home</li>
+                <li class="opt">How it works</li>
+                <li class="opt">About Us</li>
+                
+            </ul>
+            <div class="button-container">
+                <button class="signup">Sign Up</button>
+                <button class="login">Log In</button> 
+            </div>
+        </nav>
+        
+    </header>
+    <div class = "main">
+
+    <!-- Heading -->
+    <h1 class="main-heading">AI Text Summarizer</h1>
+
+    <!-- Main Container for Input and Summary -->
+    <div class="main-container">
+        <!-- Input Container -->
+        <div class="input-container">
+            <h2>Input Text</h2>
+            <textarea placeholder="Enter your text here..."></textarea>
+            <div class="button-group">
+                <div class="file-upload">
+                    <label for="fileInput" class="file-upload-label">
+                        <i class="fa-solid fa-cloud-arrow-up"></i> Upload Doc
+                    </label>
+                    <input type="file" id="fileInput">
+                </div>
+                <button id="summarizeBtn">Summarize</button>
+            </div>
+        </div>
+
+        <!-- Summary Container -->
+        <div class="summary-container">
+            <h2>Summary</h2>
+            <div class="summary-content">
+                <p id="summaryText">Your summarized text will appear here...</p>
+                <button id="copyBtn">Copy Summary</button>
+            </div>
+        </div>
+       
+    </div>
+    </div>
+</body>
+</html>
